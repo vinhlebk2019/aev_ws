@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/giangtin/aev/aev_ws/build'
+export PWD='/home/le/aev/aev_ws/build'

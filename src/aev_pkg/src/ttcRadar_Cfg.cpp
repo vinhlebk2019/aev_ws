@@ -81,130 +81,126 @@ void ttcRAdarObj::send_cfg(std::string msg)
 void ttcRAdarObj::start_radar(void)
 {
     std::string msg;
-
     msg = "sensorStop";
     send_cfg(msg);
 
     msg = "flushCfg";
     send_cfg(msg);
 
-    msg = "dfeDataOutputMode 1";
+    msg = " dfeDataOutputMode 1 ";
     send_cfg(msg);
 
-    msg = "channelCfg 15 7 0";
+    msg = " channelCfg 15 7 0 ";
     send_cfg(msg);
 
-    msg = "adcCfg 2 1";
+    msg = " adcCfg 2 1 ";
     send_cfg(msg);
 
-    msg = "adcbufCfg -1 0 1 1 1";
+    msg = " adcbufCfg -1 0 1 1 1 ";
     send_cfg(msg);
 
-    msg = "profileCfg 0 60 100 25 69 0 0 50 1 256 6000 0 0 30";
+    msg = " profileCfg 0 60 8 7 18.49 0 0 50 1 129 12499 0 0 158 ";
     send_cfg(msg);
 
-    msg = "chirpCfg 0 0 0 0 0 0 0 1";
+    msg = " chirpCfg 0 0 0 0 0 0 0 1 ";
     send_cfg(msg);
 
-    msg = "chirpCfg 1 1 0 0 0 0 0 4";
+    msg = " chirpCfg 1 1 0 0 0 0 0 4 ";
     send_cfg(msg);
 
-    msg = "chirpCfg 2 2 0 0 0 0 0 2";
+    msg = " chirpCfg 2 2 0 0 0 0 0 2 ";
     send_cfg(msg);
 
     // 55 is 55ms delay between 2 output frame
-    msg = "frameCfg 0 1 32 0 55 1 0";
+    msg = " frameCfg 0 2 32 0 50.01 1 0 ";
     send_cfg(msg);
 
-    msg = "lowPower 0 0";
+    msg = " lowPower 0 0 ";
     send_cfg(msg);
 
-    msg = "guiMonitor -1 1 0 0 0 0 0";
+    msg = " guiMonitor -1 1 0 0 0 0 0 ";
     send_cfg(msg);
 
     //Threshold scale [0..100]
-    msg = "cfarCfg -1 0 2 8 4 3 0 20 0";
-    send_cfg(msg);
-    msg = "cfarCfg -1 1 0 4 2 3 1 15 0";
+    msg = " cfarCfg -1 0 2 8 4 3 0 2 1 ";
     send_cfg(msg);
 
-    msg = "multiObjBeamForming -1 1 0.5";
+    msg = " cfarCfg -1 1 0 4 2 3 1 6 0 ";
     send_cfg(msg);
 
-    msg = "clutterRemoval -1 1";
+    msg = " multiObjBeamForming -1 1 0.5 ";
     send_cfg(msg);
 
-    msg = "calibDcRangeSig -1 0 -5 8 256";
+    msg = " clutterRemoval -1 1 ";
     send_cfg(msg);
 
-    msg = "extendedMaxVelocity -1 0";
+    msg = " calibDcRangeSig -1 0 -5 8 256 ";
     send_cfg(msg);
 
-    msg = "bpmCfg -1 0 0 1";
+    msg = " extendedMaxVelocity -1 0 ";
     send_cfg(msg);
 
-    msg = "lvdsStreamCfg -1 0 0 0";
+    msg = " bpmCfg -1 0 0 1 ";
     send_cfg(msg);
 
-    msg = "compRangeBiasAndRxChanPhase 0.0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0";
+    msg = " lvdsStreamCfg -1 0 0 0 ";
     send_cfg(msg);
 
-    msg = "measureRangeBiasAndRxChanPhase 0 1.5 0.2";
+    msg = " compRangeBiasAndRxChanPhase 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 ";
     send_cfg(msg);
 
-    msg = "CQRxSatMonitor 0 3 15 125 0";
+    msg = " measureRangeBiasAndRxChanPhase 0 1.5 0.2 ";
     send_cfg(msg);
 
-    msg = "CQSigImgMonitor 0 115 6";
+    msg = " CQRxSatMonitor 0 3 15 125 0 ";
     send_cfg(msg);
 
-    msg = "analogMonitor 0 0";
+    msg = " CQSigImgMonitor 0 115 6 ";
+    send_cfg(msg);
+
+    msg = " analogMonitor 0 0 ";
     send_cfg(msg);
 
     // View config (degrees) : [ -1 <minAzimuthDeg> <maxAzimuthDeg> <minElevationDeg> <maxElevationDeg> ]
-    msg = "aoaFovCfg -1 -45 45 -10 10";
+    msg = " aoaFovCfg -1 -60 60 0 30 ";
     send_cfg(msg);
 
     // Config point filtering in range direction (meter)
-    msg = "cfarFovCfg -1 0 0 20";
+    msg = " cfarFovCfg -1 0 0 30 ";
     send_cfg(msg);
 
     // Config point filtering in Doppler direction (meter/sec)
-    msg = "cfarFovCfg -1 1 -10 10";
+    msg = " cfarFovCfg -1 1 -20 20 ";
     send_cfg(msg);
-
-    // msg = "calibData 0 0 0";
-    // send_cfg(msg);
 
     // *****************TRACKING COMMANDS*****************************
     // https://dev.ti.com/tirex/explore/content/mmwave_industrial_toolbox_4_7_0/labs/people_counting/docs/3D_people_counting_tracker_layer_tuning_guide.pdf
-    
-    msg = "staticBoundaryBox -8 8 0 20 -1 1";
+    msg = " staticBoundaryBox -3 3 0 2 0 2 ";
     send_cfg(msg);
 
-    msg = "boundaryBox -8 8 0 20 -1 1";
+    msg = " boundaryBox -10 10 0 32 0 2 ";
     send_cfg(msg);
 
-    msg = "gatingParam 3 2 2 2 20";
+    msg = " gatingParam 30 4 6 4 20 ";
     send_cfg(msg);
 
-    msg = "stateParam 15 10 10 20 5";
+    msg = " stateParam 3 1 1 1 1 ";
     send_cfg(msg);
 
-    msg = "allocationParam 200 150 0.05 10 0.3 10";
+    msg = " allocationParam 200 150 0.05 5 16 20 ";
     send_cfg(msg);
 
-    msg = "maxAcceleration 2 2 2";
+    msg = " maxAcceleration 8 8 8 ";
     send_cfg(msg);
 
-    msg = "trackingCfg 1 2 250 20 100 50 55 90";
+    msg = " trackingCfg 1 2 800 25 200 50 50.01 90 ";
     send_cfg(msg);
 
     // *****************STATIC DETECTION COMMANDS*********************
-    msg = "heatmapGenCfg -1 0  0 40 130 60.0 3.0 10";
+    msg = " heatmapGenCfg -1 1 0 40 130 60 3 10 ";
     send_cfg(msg);
 
-    msg = "staticDetectionCfg -1 0 -50.0 +50.0 -20.0 20.0 0.7 6.0 0.2 4 20.0";
+    msg = " staticDetectionCfg -1 0 -50 50 0 20 0.7 6 0.2 4 20 ";
     send_cfg(msg);
 
     msg = "sensorStart";
@@ -257,26 +253,26 @@ structPacket ttcRAdarObj::getFramePacket(std_msgs::UInt8MultiArray raw_data, vec
 
 structHeader ttcRAdarObj::getFrameHeader (structPacket framePacket)
 {
-	structHeader frameHeader;
+ structHeader frameHeader;
 
-	// check that all packet has been read
+ // check that all packet has been read
     frameHeader.totalPacketLen = framePacket.data[12] + framePacket.data[13] * 256.0 + framePacket.data[14] * 65536.0 + framePacket.data[15] * 1.6777216E+7;
-	uint32_t idX = 0;
+ uint32_t idX = 0;
 
-	// read the header
-	if (frameHeader.totalPacketLen == framePacket.dataLen) {
-		// word array to convert 4 bytes to a 32 bit number
+ // read the header
+ if (frameHeader.totalPacketLen == framePacket.dataLen) {
+  // word array to convert 4 bytes to a 32 bit number
         // word = [1, 2**8, 2**16, 2**24]
 
         // Initialize the pointer index
         for (auto idX = 0; idX < 8; idX++) {
-			frameHeader.magicWord[idX] = framePacket.data[idX];
-		}
-		idX += 8;
+   frameHeader.magicWord[idX] = framePacket.data[idX];
+  }
+  idX += 8;
         for (auto idX = 0; idX < 4; idX++) {
-			frameHeader.version[idX] = framePacket.data[idX + 8];
-		}
-		idX += 4;
+   frameHeader.version[idX] = framePacket.data[idX + 8];
+  }
+  idX += 4;
         frameHeader.totalPacketLen = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
         idX += 4;
         frameHeader.platform = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
@@ -289,12 +285,12 @@ structHeader ttcRAdarObj::getFrameHeader (structPacket framePacket)
         idX += 4;
         frameHeader.numTLVs = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
         idX += 4;
-		frameHeader.subFrameNumber = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
+  frameHeader.subFrameNumber = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
         idX += 4;
         frameHeader.numStaticDetectedObj  = framePacket.data[idX]*1 + framePacket.data[idX + 1]*256.0 + framePacket.data[idX + 2]*65536.0 + framePacket.data[idX + 3]*1.6777216E+7;
         idX += 4;
- 	}
-	frameHeader.idX = idX;
+  }
+ frameHeader.idX = idX;
 
     // ROS_INFO("totalPacketLen: %u", frameHeader.totalPacketLen);
     // ROS_INFO("frameNumber: %u", frameHeader.frameNumber);
@@ -305,7 +301,7 @@ structHeader ttcRAdarObj::getFrameHeader (structPacket framePacket)
     //     ROS_INFO("frame %d: %u", i, framePacket.data[i]);
     // }
 
-	return frameHeader;
+ return frameHeader;
 }
 
 
@@ -588,7 +584,7 @@ float ttcRAdarObj::processingPtMinDistance (structHeader frameHeader)
         bufDistance.erase(bufDistance.begin());
         float rangePt_2 = (float)(bufDistance.size())/2; // how many elements to fit 
 
-        for (auto i = 0; i < bufDistance.size() - 1; i++) {
+        for (int i = 0; i < bufDistance.size() - 1; i++) {
             ptMinDistance = bufDistance[i];
             numRangePt_2 = 1;
             for (auto j = 0; j < bufDistance.size() - 1 - i; j++) {

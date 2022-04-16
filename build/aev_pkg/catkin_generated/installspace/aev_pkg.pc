@@ -1,4 +1,4 @@
-prefix=/home/giangtin/aev/aev_ws/install
+prefix=/home/le/aev/aev_ws/install
 
 Name: aev_pkg
 Description: Description of aev_pkg

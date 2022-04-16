@@ -1,8 +1,8 @@
-# Install script for directory: /home/giangtin/aev/aev_ws/src/aev_pkg
+# Install script for directory: /home/le/aev/aev_ws/src/aev_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giangtin/aev/aev_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/le/aev/aev_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/msg" TYPE FILE FILES "/home/giangtin/aev/aev_ws/src/aev_pkg/msg/radar_msg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/msg" TYPE FILE FILES "/home/le/aev/aev_ws/src/aev_pkg/msg/radar_msg.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/cmake" TYPE FILE FILES "/home/giangtin/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/cmake" TYPE FILE FILES "/home/le/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/giangtin/aev/aev_ws/devel/include/aev_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/le/aev/aev_ws/devel/include/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/giangtin/aev/aev_ws/devel/share/roseus/ros/aev_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/le/aev/aev_ws/devel/share/roseus/ros/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/giangtin/aev/aev_ws/devel/share/common-lisp/ros/aev_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/le/aev/aev_ws/devel/share/common-lisp/ros/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/giangtin/aev/aev_ws/devel/share/gennodejs/ros/aev_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/le/aev/aev_ws/devel/share/gennodejs/ros/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/giangtin/aev/aev_ws/devel/lib/python2.7/dist-packages/aev_pkg")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/le/aev/aev_ws/devel/lib/python2.7/dist-packages/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/giangtin/aev/aev_ws/devel/lib/python2.7/dist-packages/aev_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/le/aev/aev_ws/devel/lib/python2.7/dist-packages/aev_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giangtin/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/le/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/cmake" TYPE FILE FILES "/home/giangtin/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/cmake" TYPE FILE FILES "/home/le/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkg-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg/cmake" TYPE FILE FILES
-    "/home/giangtin/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkgConfig.cmake"
-    "/home/giangtin/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkgConfig-version.cmake"
+    "/home/le/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkgConfig.cmake"
+    "/home/le/aev/aev_ws/build/aev_pkg/catkin_generated/installspace/aev_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg" TYPE FILE FILES "/home/giangtin/aev/aev_ws/src/aev_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/aev_pkg" TYPE FILE FILES "/home/le/aev/aev_ws/src/aev_pkg/package.xml")
 endif()
 

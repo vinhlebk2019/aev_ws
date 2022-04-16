@@ -67,14 +67,14 @@ set(aev_pkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(aev_pkg_SOURCE_PREFIX /home/giangtin/aev/aev_ws/src/aev_pkg)
-  set(aev_pkg_DEVEL_PREFIX /home/giangtin/aev/aev_ws/devel)
+  set(aev_pkg_SOURCE_PREFIX /home/le/aev/aev_ws/src/aev_pkg)
+  set(aev_pkg_DEVEL_PREFIX /home/le/aev/aev_ws/devel)
   set(aev_pkg_INSTALL_PREFIX "")
   set(aev_pkg_PREFIX ${aev_pkg_DEVEL_PREFIX})
 else()
   set(aev_pkg_SOURCE_PREFIX "")
   set(aev_pkg_DEVEL_PREFIX "")
-  set(aev_pkg_INSTALL_PREFIX /home/giangtin/aev/aev_ws/install)
+  set(aev_pkg_INSTALL_PREFIX /home/le/aev/aev_ws/install)
   set(aev_pkg_PREFIX ${aev_pkg_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/giangtin/aev/aev_ws/install/lib;/home/giangtin/aev/simulation_ws/devel/lib;/home/giangtin/Downloads/obstacleAvoidanceRobot/catkin_ws/devel/lib;/home/giangtin/aev/aev_ws/devel/lib;/home/giangtin/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/le/aev/aev_ws/install/lib;/home/le/aev/aev_ws/devel/lib;/home/le/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

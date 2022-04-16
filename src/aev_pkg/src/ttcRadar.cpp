@@ -23,7 +23,7 @@ void timer_uart_Callback(const ros::TimerEvent& )
             msg_counter++;
             ttcRadarObj.clear_msg(ttcRadar_output_msg);
             if (!ttcRadarObj.Output.numObj) ttcRadar_output_msg.isObject = false;
-            for (auto i = 0; i < ttcRadarObj.Output.numObj; i++) {
+            for (uint16_t i = 0; i < ttcRadarObj.Output.numObj; i++) {
                 ttcRadar_output_msg.numObj = ttcRadarObj.Output.numObj;
                 ttcRadar_output_msg.IdObj.push_back(ttcRadarObj.Output.IdObj[i]);
                 ttcRadar_output_msg.isApproach.push_back(ttcRadarObj.Output.isApproach[i]);

@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+# aev_ws author: Mr. Giang Tin 
+Link: https://github.com/giangtin1920/aev_ws.git
 # AEV workspace
 
 aev/aev_ws

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AEV workspace
 
 aev/aev_ws
@@ -65,3 +66,6 @@ https://github.com/giangtin1920/radarScanQT_ROS
 
 https://github.com/giangtin1920/AEV_simulation_ros_gazebo
     
+=======
+# aev_ws
+>>>>>>> 2f688e4fb75b2014094b0dd5b9486bbe539550cb
